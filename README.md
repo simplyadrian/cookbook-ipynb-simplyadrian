@@ -23,33 +23,45 @@ Attributes
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['ipython-notebook']['port']</tt></td>
-    <td>Number</td>
-    <td>Port Number the notebook server will listen on.</td>
-    <td>8888</td>
+    <td><tt>['ipynb-nativex']['linux_user']</tt></td>
+    <td>String</td>
+    <td>The user iPython notebook will run under.</td>
+    <td>ipynb</td>
   </tr>
   <tr>
-    <td><tt>['ipython-notebook']['ip']</tt></td>
+    <td><tt>['ipynb-nativex']['linux_group']</tt></td>
+    <td>String</td>
+    <td>The group iPython notebook will run under.</td>
+    <td>ipynb</td>
+  </tr>
+  <tr>
+    <td><tt>['ipynb-nativex']['home_dir']</tt></td>
+    <td>String</td>
+    <td>The home directory of the iPython notebook user.</td>
+    <td>/home/ipynb</td>
+  </tr>
+  <tr>
+    <td><tt>['ipynb-nativex']['notebook_dir']</tt></td>
+    <td>String</td>
+    <td>The working directory of the iPython notebook process.</td>
+    <td>/home/ipynb/notebooks</td>
+  </tr>
+  <tr>
+    <td><tt>['ipynb-nativex']['ip']</tt></td>
     <td>String</td>
     <td>The IP address the notebook server will listen on.</td>
-    <td>127.0.0.1</td>
+    <td>node['ipaddress']</td>
+  </tr>
+  <tr>
+    <td><tt>['ipynb-nativex']['port']</tt></td>
+    <td>Number</td>
+    <td>Port Number the notebook server will listen on.</td>
+    <td>80</td>
   </tr>
 </table>
 
 Usage
 -----
-#### Install Only
-
-Just include `ipython-notebook` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "ipython-notebook"
-  ]
-}
-```
 
 #### Install And Launch
 
@@ -58,20 +70,19 @@ Some options needed.
 ```json
 {
   "name":"my_node",
-  "ipython-notebook": {
-      "port": 8888,
-      "ip": "*"
+  "ipynb-nativex": {
+      "port": 80,
+      "ip": node['ipaddress']
   },
   "run_list": [
-    "ipython-notebook",
-    "ipython-notebook::launch"
+    "ipynb-nativex"
   ]
 }
 ```
 
 Todo
 -----
-- Make notes directory and clone notebook repo.
+- clone notebook repo.
 - Use supervisor to daemonize
 
 License and Authors
