@@ -41,7 +41,7 @@ directory node['ipynb-nativex']['notebook_dir'] do
 end
 
 # Deliver launch script
-template node['ipynb-nativex']['notebook_dir']/launch.sh do
+template "#{node['ipynb-nativex']['notebook_dir']}/launch.sh" do
   source "launch.sh.erb"
   owner node['ipynb-nativex']['linux_user']
   group node['ipynb-nativex']['linux_group']
