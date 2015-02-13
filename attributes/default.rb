@@ -2,7 +2,7 @@
 # iPython user
 default['ipynb-nativex']['linux_user'] = "ipynb"
 # iPython group
-default'ipynb-nativex']['linux_group'] = "ipynb"
+default['ipynb-nativex']['linux_group'] = "ipynb"
 # iPython Notebook user home directory
 default['ipynb-nativex']['home_dir'] = "/home/ipynb"
 # iPython Notebook working directory
