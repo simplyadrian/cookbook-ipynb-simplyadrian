@@ -10,15 +10,15 @@
 include_recipe 'python'
 
 # Install packages
-%w{
-  python-ipython-notebook
-  python33-scipy
-}.each do |pkg|
+node['ipynb-nativex']['system_packages'].each do |pkg|
   package pkg do
     action :upgrade
   end
 end
 
-# iPython needs sympy (0.7.2)
-# So use [pip install] instead of package install (0.6.3).
-python_pip "sympy"
+# Install packages
+node['ipynb-nativex']['packages'].each do |pkg|
+  python_pip pkg do
+    action :install
+  end
+end

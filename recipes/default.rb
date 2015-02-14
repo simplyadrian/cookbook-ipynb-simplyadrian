@@ -8,5 +8,6 @@
 #
 
 include_recipe 'ipynb-nativex::install'
+include_recipe 'ipynb-nativex::configure'
 include_recipe 'ipynb-nativex::launch'
 

@@ -1,4 +1,8 @@
 #
+# iPython packages
+default['ipynb-nativex']['packages'] = {}
+# System packages
+default['ipynb-nativex']['system_packages'] = {}
 # iPython user
 default['ipynb-nativex']['linux_user'] = "ipynb"
 # iPython group
