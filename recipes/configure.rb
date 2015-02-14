@@ -41,7 +41,7 @@ directory node['ipynb-nativex']['notebook_dir'] do
 end
 
 # Make sure the default profile exists.
-ipynb_profile 'default' do
+profile 'default' do
    action :create
    owner nnode['ipynb-nativex']['linux_user']
    ipython_path "/bin/ipython"
@@ -49,7 +49,7 @@ ipynb_profile 'default' do
 end
 
 # Create custom iPython profile.
-ipynb_profile node['ipynb-nativex']['profile_name'] do
+profile node['ipynb-nativex']['profile_name'] do
    action :create
    owner node['ipynb-nativex']['linux_user']
    ipython_path "/bin/ipython"
