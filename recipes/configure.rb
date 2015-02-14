@@ -43,7 +43,7 @@ end
 # Make sure the default profile exists.
 ipynb_nativex_profile 'default' do
    action :create
-   owner nnode['ipynb-nativex']['linux_user']
+   owner node['ipynb-nativex']['linux_user']
    ipython_path "/bin/ipython"
    ipython_settings_dir ipython_settings_dir
 end
