@@ -56,24 +56,12 @@ ipynb_nativex_profile node['ipynb-nativex']['profile_name'] do
    ipython_settings_dir ipython_settings_dir
 end
 
-ipynb_mathjax "MathJax!" do
-   action :create
-   owner node[:ipynb][:linux_user]
-   ipython_path "#{node[:ipynb][:virtenv]}/bin/ipython"
-   install_dir File.join(node[:ipynb][:virtenv], "lib", node[:ipynb][:py_version],"site-packages/IPython/html/static/mathjax")
-end
-
-profile_dir = File.join(ipython_settings_dir,
-                        "profile_" + node[:ipynb][:profile_name])
-
-nb_config = File.join(profile_dir, "ipython_notebook_config.py")
-
-
-# Set the password hash if the password is set
-unless node[:ipynb][:NotebookApp][:password].nil?
-   ipy_hash = IPythonAuth.ipython_hash(node[:ipynb][:NotebookApp][:password])
-   node.set[:ipynb][:NotebookApp][:password_hash] = ipy_hash
-end
+#ipynb_mathjax "MathJax!" do
+#   action :create
+#   owner node[:ipynb][:linux_user]
+#   ipython_path "#{node[:ipynb][:virtenv]}/bin/ipython"
+#   install_dir File.join(node[:ipynb][:virtenv], "lib", node[:ipynb][:py_version],"site-packages/IPython/html/static/mathjax")
+#end
 
 # Deliver launch script
 template "#{node['ipynb-nativex']['home_dir']}/launch.sh" do
