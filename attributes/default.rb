@@ -11,6 +11,8 @@ default['ipynb-nativex']['linux_group'] = "ipynb"
 default['ipynb-nativex']['home_dir'] = "/home/ipynb"
 # iPython Notebook working directory
 default['ipynb-nativex']['notebook_dir'] = "/home/ipynb/notebooks"
+# iPython Notebook profile name
+default['ipynb-nativex']['profile_name'] = "nbserver"
 # iPython Notebook listening address
 default['ipynb-nativex']['ip'] = node['ipaddress']
 # iPython Notebook listening port
