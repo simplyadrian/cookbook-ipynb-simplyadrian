@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: ipynb-nativex
+# Cookbook Name:: ipynb-simplyadrian
 # Recipe:: profile 
 #
-# Copyright 2014, NativeX
+# Copyright 2014, simplyadrian
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -16,6 +16,6 @@ def initialize(*args)
    @action = :create
 end
 
-attribute :owner, :regex => [ /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/ ], :default => node['ipynb-nativex']['linux_user']
+attribute :owner, :regex => [ /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/ ], :default => node['ipynb-simplyadrian']['linux_user']
 attribute :ipython_path, :kind_of => String, :default => "/bin/ipython"
 attribute :ipython_settings_dir, :kind_of => String

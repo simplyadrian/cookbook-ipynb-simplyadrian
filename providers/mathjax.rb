@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: ipynb-nativex
+# Cookbook Name:: ipynb-simplyadrian
 # Recipe:: mathjax 
 #
-# Copyright 2014, NativeX
+# Copyright 2014, simplyadrian
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -18,11 +18,11 @@ def install_mathjax(install_dir, ipython_path, owner)
    python "install_mathjax" do
        user owner
        group owner
-       cwd node['ipynb-nativex']['home_dir']
+       cwd node['ipynb-simplyadrian']['home_dir']
 
-       environment "HOME" => node['ipynb-nativex']['home_dir'],
+       environment "HOME" => node['ipynb-simplyadrian']['home_dir'],
                    "SHELL" => "/bin/bash",
-                   "USER" => node['ipynb-nativex']['linux_user'],
+                   "USER" => node['ipynb-simplyadrian']['linux_user'],
                    "PATH" => "/bin:/usr/local/bin:/usr/bin:/bin",
 
        code <<-EOH

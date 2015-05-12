@@ -1,13 +1,13 @@
 #
-# Cookbook Name:: ipynb-nativex
+# Cookbook Name:: ipynb-simplyadrian
 # Recipe:: default 
 #
-# Copyright 2014, NativeX
+# Copyright 2014, simplyadrian
 #
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'ipynb-nativex::install'
-include_recipe 'ipynb-nativex::configure'
-include_recipe 'ipynb-nativex::launch'
+include_recipe 'ipynb-simplyadrian::install'
+include_recipe 'ipynb-simplyadrian::configure'
+include_recipe 'ipynb-simplyadrian::launch'
 

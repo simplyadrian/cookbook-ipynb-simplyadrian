@@ -1,19 +1,19 @@
 #
 # iPython packages
-default['ipynb-nativex']['packages'] = {}
+default['ipynb-simplyadrian']['packages'] = {}
 # System packages
-default['ipynb-nativex']['system_packages'] = {}
+default['ipynb-simplyadrian']['system_packages'] = {}
 # iPython user
-default['ipynb-nativex']['linux_user'] = "ipynb"
+default['ipynb-simplyadrian']['linux_user'] = "ipynb"
 # iPython group
-default['ipynb-nativex']['linux_group'] = "ipynb"
+default['ipynb-simplyadrian']['linux_group'] = "ipynb"
 # iPython Notebook user home directory
-default['ipynb-nativex']['home_dir'] = "/home/ipynb"
+default['ipynb-simplyadrian']['home_dir'] = "/home/ipynb"
 # iPython Notebook working directory
-default['ipynb-nativex']['notebook_dir'] = "/home/ipynb/notebooks"
+default['ipynb-simplyadrian']['notebook_dir'] = "/home/ipynb/notebooks"
 # iPython Notebook profile name
-default['ipynb-nativex']['profile_name'] = "nbserver"
+default['ipynb-simplyadrian']['profile_name'] = "nbserver"
 # iPython Notebook listening address
-default['ipynb-nativex']['ip'] = node['ipaddress']
+default['ipynb-simplyadrian']['ip'] = node['ipaddress']
 # iPython Notebook listening port
-default['ipynb-nativex']['port'] = 8888
+default['ipynb-simplyadrian']['port'] = 8888

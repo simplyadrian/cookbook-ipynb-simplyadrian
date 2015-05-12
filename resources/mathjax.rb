@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: ipynb-nativex
+# Cookbook Name:: ipynb-simplyadrian
 # Recipe:: mathjax 
 #
-# Copyright 2014, NativeX
+# Copyright 2014, simplyadrian
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -17,5 +17,5 @@ def initialize(*args)
 end
 
 attribute :install_dir
-attribute :owner, :regex =>  Chef::Config[:user_valid_regex], :default => node['ipynb-nativex']['linux_user']
+attribute :owner, :regex =>  Chef::Config[:user_valid_regex], :default => node['ipynb-simplyadrian']['linux_user']
 attribute :ipython_path, :kind_of => String, :default => "/bin/ipython"
